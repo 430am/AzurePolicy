@@ -20,15 +20,6 @@
                     "Disabled"
                 ],
                 "defaultValue": "AuditIfNotExists"
-            },
-            "retentionInDays": {
-                "type": "String",
-                "metadata": {
-                    "displayName": "Retention in Days",
-                    "description": "How long should deleted resources be retained for."
-                },
-                "minValue": 1,
-                "maxValue": 365
             }
         },
         "policyRule": {
