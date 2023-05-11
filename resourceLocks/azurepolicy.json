@@ -1,0 +1,51 @@
+{
+    "properties": {
+        "displayName": "Resource locks for critical resources should be enabled",
+        "description": "This policy audits for resource locks on critical resources",
+        "mode": "Indexed",
+        "metadata": {
+            "version": "1.0.0",
+            "category": "General"
+        },
+        "parameters": {
+            "tagName": {
+                "type": "string",
+                "metadata": {
+                    "displayName": "Tag Name",
+                    "description": "The Tag name to audit against (i.e., Environment, Cost Center, etc.)"
+                }
+            },
+            "tagValue": {
+                "type": "string",
+                "metadata": {
+                    "displayName": "Tag Value",
+                    "description": "Value of the tag to audit against (i.e., Prod/UAT/TEST, 12345, etc.)"
+                }
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf":[
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+                    },
+                    {
+                        "field": "[concat('tags[', parameters('tagName'), ']')]",
+                        "equals": "[parameters('tagValue')]"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "AuditIfNotExists",
+                "details": {
+                    "type": "Microsoft.Authorization/locks",
+                    "existenceCondition": {
+                        "field": "Microsoft.Authorization/locks/level",
+                        "equals": "CanNotDelete"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "properties": {
+        "displayName": "Autopatching for supported Linux VMs should be enabled",
+        "description": "This policy audits for the automaticByPlatform configuration setting on supported Linux VMs",
+        "mode": "Indexed",
+        "metadata": {
+            "version": "1.0.0",
+            "category": "Compute"
+        },
+        "parameters": {
+            "effect": {
+                "type": "string",
+                "metadata": {
+                    "displayName": "Effect",
+                    "description": "Enable or disable the execution of the policy"
+                },
+                "allowedValues": [
+                    "Audit",
+                    "Disabled"
+                ],
+                "defaultValue": "Audit"
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Compute/virtualMachines"
+                    },
+                    {
+                        "field": "Microsoft.Compute/virtualMachines/osProfile.linuxConfiguration.patchsettings.patchMode",
+                        "notEquals": "AutomaticByPlatform"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "[parameters('effect')]"
+            }
+        }
+    }
+}

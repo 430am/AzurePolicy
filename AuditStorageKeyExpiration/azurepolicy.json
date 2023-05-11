@@ -1,0 +1,45 @@
+{
+    "properties": {
+        "displayName": "Audit - Azure Storage Account Key Expiration Policy",
+        "policyType": "Custom",
+        "mode": "Indexed",
+        "description": "Protect your Storage Account by ensuring an access key expiration policy exists",
+        "metadata": {
+            "version": "1.0.0-preview",
+            "category": "Storage"
+        }
+    },
+    "parameters": {
+        "effectType": {
+            "type": "string",
+            "metadata": {
+                "displayName": "Policy Effect",
+                "description": "The Policy Effect associated with this Policy Definition"
+            },
+            "defaultValue": "AuditIfNotExists"
+        },
+        "keyExpirationPeriodInDays":  {
+            "type": "string",
+            "metadata": {
+                "displayName": "Expiration Period in Days",
+                "description": "How long before the key expires"
+            },
+            "minValue": 
+        }
+    },
+    "policyRule": {
+        "if": {
+            "field": "type",
+            "equals": "Microsoft.Storage/storageAccounts"
+        },
+        "then": {
+            "effect": "[parameters('effect')]",
+            "details": {
+                "type": "Microsoft.Storage/storageAccounts/keyPolicy",
+                "existenceCondition": {
+                    "allOf"
+                }
+            }
+        }
+    }
+}
