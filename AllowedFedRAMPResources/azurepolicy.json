@@ -1,0 +1,1137 @@
+{
+    "properties": {
+        "displayName": "Allowed resources - FedRAMP compliant",
+        "description": "This policy enables you to restrict the resources that are allowed to be created according to their current FedRAMP compliance as reported at https://learn.microsoft.com/en-us/azure/azure-government/compliance/azure-services-in-fedramp-auditscope",
+        "mode": "All",
+        "metadata": {
+            "version": "0.0.1",
+            "category": "General"
+        },
+        "parameters": {}
+    },
+    "policyRule": {
+        "if": {
+            "allOf": [
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AAD/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ADHybridHealthService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AVS/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Addons/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Advisor/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AlertsManagement/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AnalysisServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ApiManagement/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ApiSecurity/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.App/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AppAssessment/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AppComplianceAutomation/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AppConfiguration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AppPlatform/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Attestation/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Authorization/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Automation/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureActiveDirectory/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureArcData/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureCIS/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureData/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureStack/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.AzureStackHCI/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.BackupSolutions/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.BareMetalInfrastructure/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Batch/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Billing/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.BillingBenefits/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Blueprint/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.BotService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Cache/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Capacity/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Cdn/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CertificateRegistration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ChangeAnalysis/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ClassicCompute/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ClassicInfrastructureMigrate/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ClassicNetwork/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ClassicStorage/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ClassicSubscription/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CloudShell/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CognitiveSearch/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CognitiveServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Commerce/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Communication/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Compute/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ConnectedCache/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ConnectedVMwarevSphere/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Consumption/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ContainerInstance/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ContainerRegistry/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ContainerService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CostManagement/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CostManagementExports/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CustomProviders/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.CustomerLockbox/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DBforMariaDB/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DBforMySQL/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DBforPostgreSQL/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Dashboard/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataBox/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataBoxEdge/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataCollaboration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataFactory/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataLakeStore/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataMigration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataProtection/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataReplication/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DataShare/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DatabaseWatcher/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Databricks/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DelegatedNetwork/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DeploymentManager/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DesktopVirtualization/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DevOps/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DevTestLab/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DeviceUpdate/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Devices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DocumentDB/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.DomainRegistration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.EventGrid/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.EventHub/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ExtendedLocation/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Features/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.GraphServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.GuestConfiguration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HDInsight/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HanaOnAzure/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HardwareSecurityModules/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Help/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HybridCompute/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HybridConnectivity/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HybridContainerService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.HybridNetwork/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.KeyVault/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Kubernetes/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.KubernetesConfiguration/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Kusto/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Logic/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Logz/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.MachineLearning/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.MachineLearningServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Maintenance/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ManagedIdentity/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ManagedNetworkFabric/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ManagedServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ManagedStorageClass/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Management/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Marketplace/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.MarketplaceNotifications/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.MarketplaceOrdering/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Media/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Metaverse/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Migrate/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Mission/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Monitor/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.NetApp/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Network/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.NetworkAnalytics/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.NetworkCloud/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.NetworkFunction/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.NotificationHubs/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ObjectStore/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.OffAzure/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.OffAzureSpringBoot/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.OperationalInsights/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.OperationsManagement/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Peering/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Pki/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.PolicyInsights/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Portal/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.PowerBI/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.PowerBIDedicated/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.PowerPlatform/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ProfessionalService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ProviderHub/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Purview/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Quota/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.RecommendationsService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.RecoveryServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.RedHatOpenShift/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Relay/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ResourceConnector/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ResourceGraph/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ResourceHealth/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Resources/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SaaS/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SaaSHub/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Search/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Security/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SecurityDetonation/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SecurityDevOps/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SecurityInsights/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SerialConsole/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServiceBus/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServiceFabric/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServiceFabricMesh/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServiceLinker/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServiceNetworking/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.ServicesHub/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SignalRService/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Solutions/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Sql/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SqlVirtualMachine/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.StandbyPool/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Storage/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.StorageCache/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.StorageMover/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.StorageSync/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.StreamAnalytics/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Subscription/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Synapse/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.SystemIntegrityMonitoring/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.TimeSeriesInsights/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.UsageBilling/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.VMware/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.VirtualMachineImages/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Web/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.WindowsESU/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.WindowsPushNotificationServices/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.WorkloadBuilder/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "Microsoft.Workloads/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "microsoft.aadiam/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "microsoft.connectedopenstack/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "microsoft.insights/*"
+                  }
+                },
+                {
+                  "not": {
+                    "field": "type",
+                    "like": "microsoft.support/*"
+                  }
+                }
+            ]
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+}
