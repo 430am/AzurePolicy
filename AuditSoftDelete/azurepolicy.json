@@ -20,6 +20,17 @@
                     "Disabled"
                 ],
                 "defaultValue": "AuditIfNotExists"
+            },
+            "retentionInDays": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "retentionInDays",
+                    "description": "defines number of days of retention"
+                },
+                "allowedValues": [
+                    "7"
+                ],
+                "defaultValue": "7"
             }
         },
         "policyRule": {
